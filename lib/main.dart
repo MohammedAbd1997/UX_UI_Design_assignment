@@ -14,35 +14,25 @@ void main() async {
         child: MyApp()),
   );
 }
-class MyApp extends StatelessWidget {
-@override
-Widget build(BuildContext context) {
-  // TODO: implement build
-  return ScreenUtilInit(
-    designSize: Size(411, 820),
-    minTextAdapt: true,
-    builder: () => MaterialApp(
-      debugShowCheckedModeBanner: false,
-        localizationsDelegates: context.localizationDelegates,
-        supportedLocales: context.supportedLocales,
-        locale: context.locale,
-        home: _MainScreenState()
 
-      /* Builder(builder: (context) {
-            return Scaffold(
-              body: Center(
-                child: RaisedButton(
-                  onPressed: () {
-                    print(MediaQuery.of(context).size.width.toString());
-                    print(MediaQuery.of(context).size.height.toString());
-                  },
-                ),
-              ),
-            );
-          })*/
-    ),
-  );
-}
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return ScreenUtilInit(
+      designSize: Size(411, 820),
+      minTextAdapt: true,
+      builder: () =>
+          MaterialApp(
+              debugShowCheckedModeBanner: false,
+              localizationsDelegates: context.localizationDelegates,
+              supportedLocales: context.supportedLocales,
+              locale: context.locale,
+              home: _MainScreenState()
+
+          ),
+    );
+  }
 }
 
 class _MainScreenState extends StatefulWidget {
@@ -79,7 +69,6 @@ class __MainScreenStateState extends State<_MainScreenState> {
             ),
             ListTile(
               onTap: () {
-
                 setState(() {
 
                 });
